@@ -1,0 +1,48 @@
+name: afrofit_wellness
+description: A fitness app specifically designed for African users with culturally relevant content
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.2
+
+  # UI Components
+  google_fonts: ^6.1.0
+  
+  # Charts & Graphs
+  fl_chart: ^0.65.0
+  
+  # Utilities
+  intl: ^0.18.1
+  uuid: ^4.2.1
+  path_provider: ^2.1.1
+
+  # Icons
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.7
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment when you have assets
+  # assets:
+  #   - assets/images/
+  #   - assets/data/
