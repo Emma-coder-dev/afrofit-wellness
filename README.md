@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏋️ AfroFit Wellness - Fitness App for Africa
 
 ![AfroFit Wellness](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -533,3 +534,6 @@ This app is for informational and educational purposes only. It is not a substit
 ---
 
 *Last Updated: October 2025*
+=======
+# afrofit-wellness
+>>>>>>> 41d553870c3916452890375e51063fe9b367e7f5
