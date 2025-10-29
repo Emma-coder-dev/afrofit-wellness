@@ -63,7 +63,7 @@ class DailyStatsCard extends StatelessWidget {
                 'Today\'s Summary',
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
-                      color: ColorPalette.textPrimary,
+                      color: const Color.fromARGB(255, 131, 180, 143),
                     ),
               ),
             ],
@@ -157,7 +157,7 @@ class DailyStatsCard extends StatelessWidget {
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
-                          color: ColorPalette.textPrimary,
+                          color: Color.fromARGB(255, 131, 180, 143),
                         ),
                       ),
                       Text(
