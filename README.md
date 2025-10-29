@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🏋️ AfroFit Wellness - Fitness App for Africa
 
 ![AfroFit Wellness](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -495,24 +494,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 🎯 App Screenshots
-
-### Onboarding
-![Onboarding](screenshots/onboarding.png)
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Nutrition Tracking
-![Nutrition](screenshots/nutrition.png)
-
-### Workouts
-![Workouts](screenshots/workouts.png)
-
-### Progress Charts
-![Progress](screenshots/progress.png)
-
----
 
 ## 🔐 Privacy & Security
 
@@ -529,11 +510,9 @@ This app is for informational and educational purposes only. It is not a substit
 
 ---
 
-**Built with ❤️ for Africa**
 
 ---
 
 *Last Updated: October 2025*
 =======
 # afrofit-wellness
->>>>>>> 41d553870c3916452890375e51063fe9b367e7f5
