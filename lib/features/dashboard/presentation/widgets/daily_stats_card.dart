@@ -260,7 +260,7 @@ class DailyStatsCard extends StatelessWidget {
                   fontSize: 16,
                   color: completed 
                       ? ColorPalette.success 
-                      : ColorPalette.textPrimary,
+                      : const Color.fromARGB(255, 131, 180, 143),
                 ),
               ),
             ],

@@ -34,10 +34,17 @@ class _FoodDiaryScreenState extends State<FoodDiaryScreen> {
       final todayKey = LocalStorageService.getTodayKey();
       final log = await LocalStorageService.getDailyLog(todayKey);
 
-      // Get meals from daily log
+      // Get meals from daily log - FIX THE TYPE CASTING HERE
       final meals = <Map<String, dynamic>>[];
       if (log != null && log['meals'] != null) {
-        meals.addAll((log['meals'] as List).cast<Map<String, dynamic>>());
+        final mealsList = log['meals'] as List;
+        for (var meal in mealsList) {
+          if (meal is Map<String, dynamic>) {
+            meals.add(meal);
+          } else if (meal is Map) {
+            meals.add(Map<String, dynamic>.from(meal)); // ← PROPER TYPE CASTING
+          }
+        }
       }
 
       setState(() {
@@ -104,9 +111,15 @@ class _FoodDiaryScreenState extends State<FoodDiaryScreen> {
       );
     }
 
-    final dailyGoals = userData?['dailyGoals'] as Map<String, dynamic>?;
-    final caloriesGoal = dailyGoals?['calories'] as int? ?? 2000;
-    final proteinGoal = dailyGoals?['protein'] as int? ?? 150;
+    // FIX: Properly cast dailyGoals
+    final dailyGoalsRaw = userData?['dailyGoals'];
+    Map<String, dynamic>? dailyGoals;
+    if (dailyGoalsRaw != null && dailyGoalsRaw is Map) {
+      dailyGoals = Map<String, dynamic>.from(dailyGoalsRaw);
+    }
+
+    final caloriesGoal = (dailyGoals?['calories'] as int?) ?? 2000;
+    final proteinGoal = (dailyGoals?['protein'] as int?) ?? 150;
 
     final caloriesConsumed = dailyLog?['caloriesConsumed'] as int? ?? 0;
     final proteinConsumed = dailyLog?['proteinConsumed'] as int? ?? 0;
@@ -188,15 +201,15 @@ class _FoodDiaryScreenState extends State<FoodDiaryScreen> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            ColorPalette.primary.withValues(alpha: 0.1),
-            ColorPalette.secondary.withValues(alpha: 0.1),
+            ColorPalette.primary.withOpacity(0.1),
+            ColorPalette.secondary.withOpacity(0.1),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: ColorPalette.primary.withValues(alpha: 0.3),
+          color: ColorPalette.primary.withOpacity(0.3),
         ),
       ),
       child: Column(
@@ -378,7 +391,7 @@ class _NutritionStat extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
           child: LinearProgressIndicator(
             value: progress,
-            backgroundColor: color.withValues(alpha: 0.2),
+            backgroundColor: color.withOpacity(0.2),
             valueColor: AlwaysStoppedAnimation<Color>(color),
             minHeight: 6,
           ),
