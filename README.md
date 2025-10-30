@@ -425,12 +425,6 @@ flutter build ios
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -445,7 +439,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 👥 Authors
 
-- **Neema Kageni** - *Initial work* - [YourGitHub](https://github.com/Emma-coder-dev)
+- **Majira Neema Kageni** - *Initial work* - [Emma-coder-dev](https://github.com/Emma-coder-dev)
 
 ---
 
